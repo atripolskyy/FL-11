@@ -145,3 +145,65 @@ textarea.form-control {
   display: flex;
   align-items: flex-start;
 }
+
+@media print {
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .tm-main-content {
+    padding-top: 0;
+  }
+
+  .tm-sidebar,
+  .tm-content-box::after,
+  .tm-team-img,
+  #about,
+  .blocks .tm-content-box,
+  section.tm-content-box,
+  .carousel-indicators {
+    display: none;
+  }
+
+  section.heading.tm-content-box {
+    display: block;
+  }
+
+  .tm-banner {
+    background: #fff;
+    padding: 0;
+  }
+
+  .tm-banner-inner {
+    padding: 20px 0;
+  }
+
+  .padding-medium,
+  .carousel {
+    padding: 0;
+  }
+
+  .heading h2 {
+    font-weight: 300;
+  }
+
+  h2.tm-section-title,
+  .heading h2 {
+    text-transform: uppercase;
+  }
+
+  .flex-2-col {
+    display: block;
+  }
+
+  .tm-banner-text {
+    word-spacing: normal;
+    letter-spacing: normal;
+  }
+
+  .tm-team-description-container {
+    max-width: none;
+    text-align: center;
+  }
+}
