@@ -3,3 +3,90 @@
 write your code here
 
 */
+.box-bg:hover {
+  background-color: lightskyblue;
+}
+
+.box-bg:hover h2.tm-section-title {
+  color: #fff;
+}
+
+.tm-sidebar,
+.tm-content-box {
+  -webkit-box-shadow: 0 1px 10px 0 rgba(61,55,061,0.7);
+  -moz-box-shadow: 0 1px 10px 0 rgba(61,55,061,0.7);
+  box-shadow: 0 1px 10px 0 rgba(61,55,061,0.7);
+}
+
+.tm-content-box {
+  position: relative;
+}
+
+.tm-content-box::after {
+  content: '';
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 40px 0 0;
+  border-color: #76cdd7 transparent transparent transparent;
+}
+
+.tm-banner {
+  background-color: #76cdd7;
+}
+
+.tm-banner-inner {
+  background-color: #fff;
+}
+
+.tm-banner-text {
+  text-shadow: 0 3px 0 #76cdd7;
+  letter-spacing: 5px;
+  word-spacing: 8px;
+}
+
+.heading h2 {
+  text-align: center;
+  color: lightskyblue;
+}
+
+.heading ol {
+  list-style-type: lower-roman;
+}
+
+.heading ol a {
+  position: relative;
+}
+
+.heading ol a:visited {
+  color: #ffb347;
+}
+
+.heading ol a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.heading ol a:hover::before {
+  content: '';
+  position: absolute;
+  border-left: 3px solid #ffb347;
+  width: 2px;
+  height: 20px;
+  left: -4px;
+  top: 1px;
+}
+
+.heading ol a.text::after {
+  content: 'New';
+  color: red;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 11px;
+  top: -2px;
+  right: -20px;
+  position: absolute;
+}
