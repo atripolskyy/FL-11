@@ -104,6 +104,14 @@ section::after {
   justify-content: center;
 }
 
+.tm-section-description {
+  text-indent: 25px;
+}
+
+section p:first-of-type {
+  font-style: italic;
+}
+
 .gallery-container .box-work {
   padding: 10px;
 }
@@ -121,9 +129,11 @@ section::after {
   color: #000;
 }
 
+/*
 .carousel-description {
   font-style: italic;
 }
+*/
 
 .form-control {
   border: 2px solid transparent;
