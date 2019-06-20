@@ -18,7 +18,7 @@ write your code here
 .tm-sidebar,
 .tm-content-header,
 section {
-  box-shadow: 0 1px 10px 0 rgba(61,55,061,0.7);
+  box-shadow: 0 1px 10px 0 rgba(61,55,61,0.7);
 }
 
 section {
@@ -46,7 +46,7 @@ section::after {
 }
 
 .tm-banner-text {
-  text-shadow: 0 3px 0 #76cdd7;
+  text-shadow: 0 3px 0 #76cdd7, 0 10px 2px #76cdd7;
   letter-spacing: 5px;
   word-spacing: 8px;
 }
@@ -104,11 +104,11 @@ section::after {
   justify-content: center;
 }
 
-.tm-section-description {
+.blocks .tm-section-description {
   text-indent: 25px;
 }
 
-section p:first-of-type {
+.blocks p:first-of-type {
   font-style: italic;
 }
 
@@ -120,20 +120,17 @@ section p:first-of-type {
   background-color: #f5f5f5;
 }
 
-.gallery-container .box-work p {
-  font-style: italic;
-  color: #666;
+.gallery-container .box-work p::first-letter {
+  font-size: 22px;
 }
 
 .gallery-container .box-work p::first-letter {
   color: #000;
 }
 
-/*
 .carousel-description {
   font-style: italic;
 }
-*/
 
 .form-control {
   border: 2px solid transparent;
@@ -149,6 +146,16 @@ textarea.form-control {
 .form-control:focus {
   background-color: #76cdd7;
   border: 2px solid skyblue;
+}
+
+#contact_email {
+  background: url(../img/email-icon.png) no-repeat right center;
+  background-size: 28px;
+}
+
+#contact_email:focus {
+  background: #76cdd7 url(../img/email-icon.png) no-repeat right center;
+  background-size: 28px;
 }
 
 .submit-btn {
