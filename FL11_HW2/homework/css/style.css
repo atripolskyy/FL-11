@@ -49,6 +49,19 @@ section::after {
   text-shadow: 0 3px 0 #76cdd7, 0 10px 2px #76cdd7;
   letter-spacing: 5px;
   word-spacing: 8px;
+  animation-name: rotateText;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotateText {
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
 }
 
 .heading h2 {
@@ -104,11 +117,12 @@ section::after {
   justify-content: center;
 }
 
-.blocks .tm-section-description {
+section .tm-section-description {
   text-indent: 25px;
+  line-height: 1.8;
 }
 
-.blocks p:first-of-type {
+section p:first-of-type {
   font-style: italic;
 }
 
