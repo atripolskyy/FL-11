@@ -13,7 +13,7 @@
 .tm-sidebar,
 .tm-content-header,
 section {
-  box-shadow: 0 1px 10px 0 rgba(61,55,61,0.7);
+  box-shadow: 0 1px 10px 0 rgba(61, 55, 61, 0.7);
 }
 
 section {
@@ -158,12 +158,12 @@ textarea.form-control {
 }
 
 #contact_email {
-  background: url(../img/email-icon.png) no-repeat right center;
+  background: url("../img/email-icon.png") no-repeat right center;
   background-size: 28px;
 }
 
 #contact_email:focus {
-  background: #76cdd7 url(../img/email-icon.png) no-repeat right center;
+  background: #76cdd7 url("../img/email-icon.png") no-repeat right center;
   background-size: 28px;
 }
 
