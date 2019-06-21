@@ -155,6 +155,7 @@ textarea.form-control {
 .form-control:focus {
   background-color: #76cdd7;
   border: 2px solid skyblue;
+  color: #fff;
 }
 
 #contact_email {
@@ -183,6 +184,10 @@ textarea.form-control {
 }
 
 @media print {
+  body {
+    background-color: #fff;
+  }
+
   .container {
     max-width: 100%;
     padding: 0;
@@ -193,7 +198,7 @@ textarea.form-control {
   }
 
   .tm-sidebar,
-  .tm-content-box::after,
+  section::after,
   .tm-team-img,
   #about,
   .blocks .tm-content-box,
@@ -202,8 +207,22 @@ textarea.form-control {
     display: none;
   }
 
+  .tm-content-box,
+  .blocks {
+    margin-bottom: 20px;
+  }
+
   section.heading.tm-content-box {
     display: block;
+  }
+
+  section .tm-section-description {
+    text-indent: 0;
+    line-height: initial;
+  }
+
+  section p:first-of-type {
+    font-style: normal;
   }
 
   .tm-banner {
@@ -215,6 +234,10 @@ textarea.form-control {
     padding: 20px 0;
   }
 
+  .tm-banner-text {
+    animation: none;
+  }
+
   .padding-medium,
   .carousel {
     padding: 0;
@@ -222,6 +245,60 @@ textarea.form-control {
 
   .heading h2 {
     font-weight: 300;
+  }
+
+  .heading ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .heading ol li {
+    width: 50%;
+    padding: 0 65px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .heading ol li:nth-child(odd) {
+    text-align: right;
+    justify-content: flex-start;
+  }
+
+  .heading ol li:last-child {
+    height: initial;
+  }
+
+  .heading ol a:hover {
+    font-weight: 300;
+  }
+
+  .heading ol a:hover::before {
+    display: none;
+  }
+
+  .heading ol a,
+  .heading ol a:visited {
+    color: #000;
+    display: inline-block;
+  }
+
+  .heading ol a::first-letter,
+  .heading ol a:visited::first-letter {
+    color: lightskyblue;
+    font-size: 24px;
+  }
+
+  .heading ol a.text::after {
+    display: none;
+  }
+
+  .tm-section-title {
+    margin-bottom: 15px;
   }
 
   h2.tm-section-title,
