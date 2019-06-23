@@ -70,6 +70,7 @@ section::after {
 
 .heading ol a {
   position: relative;
+  color: #000;
 }
 
 .heading ol a:visited {
@@ -79,6 +80,7 @@ section::after {
 .heading ol a:hover {
   font-weight: bold;
   text-decoration: none;
+  color: #ffb347;
 }
 
 .heading ol a:hover::before {
