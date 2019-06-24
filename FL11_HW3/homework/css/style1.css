@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  font-family: 'Hind', sans-serif; }
+  font-family: 'Hind', sans-serif;
+  background-color: #fff; }
 
 button {
   background-color: #699900;

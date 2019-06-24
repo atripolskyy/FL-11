@@ -7,10 +7,11 @@
 body {
   margin: 0;
   font-family: 'Hind', sans-serif;
+  background-color: $bodyBackground;
 }
 
 button {
-  background-color: #699900;
+  background-color: $buttonBackground;
   color: #fff;
   font-weight: bold;
   border: none;
@@ -21,7 +22,7 @@ button {
 }
 
 .header {
-  background: url("../img/m-h-day.jpg") no-repeat;
+  background: $headerBackground;
   padding: 26px 192px 219px;
 }
 
@@ -72,7 +73,7 @@ button {
   margin: 0 -12px 174px;
 
   .section_card {
-    background-color: #21232e;
+    background-color: $cardAndFooterBackground;
     text-align: center;
     padding: 24px;
     border-radius: 5px;
@@ -99,7 +100,7 @@ button {
 .section_banner {
   @include flex;
   justify-content: space-around;
-  background: linear-gradient(to right, #649314 0%,#2f5dd3 100%);
+  background: $bannerGradient;
   border-radius: 5px;
   margin: 0 170px -92px;
   padding: 39px 0 60px;
@@ -118,7 +119,7 @@ button {
 }
 
 .footer {
-  background-color: #21232e;
+  background-color: $cardAndFooterBackground;
   color: $textColor;
   padding: 164px 192px 70px;
 
