@@ -30,7 +30,7 @@ button {
 }
 
 .landing-logo {
-  color: $darkBlue;
+  color: $headingTextColor;
   display: flex;
   align-items: center;
 
@@ -51,19 +51,19 @@ button {
 }
 
 .header_heading {
-  color: $darkBlue;
+  color: $headingTextColor;
   font: bold 60px 'Source Sans Pro', sans-serif;
   max-width: 610px;
 }
 
 .header_text {
   max-width: 820px;
-  color: $darkBlue;
+  color: $headingTextColor;
 }
 
 .section_text {
   text-align: center;
-  color: $darkBlue;
+  color: $headingTextColor;
   font: 600 35px 'Source Sans Pro', sans-serif;
 }
 
@@ -90,7 +90,7 @@ button {
     }
 
     .section_card_text {
-      color: $grayishBlue;
+      color: $textColor;
       font-size: 13px;
     }
   }
@@ -108,18 +108,18 @@ button {
 
   .section_banner_heading {
     font-size: 25px;
-    color: $darkBlue;
+    color: $headingTextColor;
   }
 
   .section_banner_text {
     font-size: 13px;
-    color: $grayishBlue;
+    color: $textColor;
   }
 }
 
 .footer {
   background-color: #21232e;
-  color: $grayishBlue;
+  color: $textColor;
   padding: 164px 192px 70px;
 
   .landing-logo {
