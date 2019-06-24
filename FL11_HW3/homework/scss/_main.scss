@@ -1,0 +1,138 @@
+// Write your styles here
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  font-family: 'Hind', sans-serif;
+}
+
+button {
+  background-color: #699900;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  font-size: 16px;
+  height: 60px;
+  padding: 0 55px;
+  border-radius: 5px;
+}
+
+.header {
+  background: url("../img/m-h-day.jpg") no-repeat;
+  padding: 26px 192px 219px;
+}
+
+.section {
+  padding: 0 192px;
+}
+
+.landing-logo {
+  color: $darkBlue;
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0;
+    padding-left: 15px;
+    @include flex;
+    flex-direction: column;
+
+    span {
+      font-size: 10px;
+      line-height: 10px;
+    }
+  }
+}
+
+.header_heading {
+  color: $darkBlue;
+  font: bold 60px 'Source Sans Pro', sans-serif;
+  max-width: 610px;
+}
+
+.header_text {
+  max-width: 820px;
+  color: $darkBlue;
+}
+
+.section_text {
+  text-align: center;
+  color: $darkBlue;
+  font: 600 35px 'Source Sans Pro', sans-serif;
+}
+
+.section_card_wrap {
+  display: flex;
+  margin: 0 -12px 174px;
+
+  .section_card {
+    background-color: #21232e;
+    text-align: center;
+    padding: 24px;
+    border-radius: 5px;
+    flex: 1 1 0;
+    margin: 0 12px;
+
+    .section_card_img {
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    .section_card_heading {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .section_card_text {
+      color: $grayishBlue;
+      font-size: 13px;
+    }
+  }
+}
+
+.section_banner {
+  @include flex;
+  justify-content: space-around;
+  background: linear-gradient(to right, #649314 0%,#2f5dd3 100%);
+  border-radius: 5px;
+  margin: 0 170px -92px;
+  padding: 39px 0 60px;
+  position: relative;
+  z-index: 1;
+
+  .section_banner_heading {
+    font-size: 25px;
+    color: $darkBlue;
+  }
+
+  .section_banner_text {
+    font-size: 13px;
+    color: $grayishBlue;
+  }
+}
+
+.footer {
+  background-color: #21232e;
+  color: $grayishBlue;
+  padding: 164px 192px 70px;
+
+  .landing-logo {
+    @extend .landing-logo;
+    color: #c0c3ce;
+  }
+
+  .footer_text {
+    max-width: 366px;
+  }
+}
+
+.footer-wrap {
+  @include flex;
+  justify-content: space-between;
+}

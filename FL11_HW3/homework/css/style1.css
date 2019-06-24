@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: 'Hind', sans-serif; }
+
+button {
+  background-color: #699900;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  font-size: 16px;
+  height: 60px;
+  padding: 0 55px;
+  border-radius: 5px; }
+
+.header {
+  background: url("../img/m-h-day.jpg") no-repeat;
+  padding: 26px 192px 219px; }
+
+.section {
+  padding: 0 192px; }
+
+.landing-logo, .footer .landing-logo {
+  color: #2c2f3c;
+  display: flex;
+  align-items: center; }
+  .landing-logo p, .footer .landing-logo p {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .landing-logo p span, .footer .landing-logo p span {
+      font-size: 10px;
+      line-height: 10px; }
+
+.header_heading {
+  color: #2c2f3c;
+  font: bold 60px 'Source Sans Pro', sans-serif;
+  max-width: 610px; }
+
+.header_text {
+  max-width: 820px;
+  color: #2c2f3c; }
+
+.section_text {
+  text-align: center;
+  color: #2c2f3c;
+  font: 600 35px 'Source Sans Pro', sans-serif; }
+
+.section_card_wrap {
+  display: flex;
+  margin: 0 -12px 174px; }
+  .section_card_wrap .section_card {
+    background-color: #21232e;
+    text-align: center;
+    padding: 24px;
+    border-radius: 5px;
+    flex: 1 1 0;
+    margin: 0 12px; }
+    .section_card_wrap .section_card .section_card_img {
+      border-radius: 5px;
+      width: 100%; }
+    .section_card_wrap .section_card .section_card_heading {
+      color: #fff;
+      font-size: 20px; }
+    .section_card_wrap .section_card .section_card_text {
+      color: #adc3ce;
+      font-size: 13px; }
+
+.section_banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(to right, #649314 0%, #2f5dd3 100%);
+  border-radius: 5px;
+  margin: 0 170px -92px;
+  padding: 39px 0 60px;
+  position: relative;
+  z-index: 1; }
+  .section_banner .section_banner_heading {
+    font-size: 25px;
+    color: #2c2f3c; }
+  .section_banner .section_banner_text {
+    font-size: 13px;
+    color: #adc3ce; }
+
+.footer {
+  background-color: #21232e;
+  color: #adc3ce;
+  padding: 164px 192px 70px; }
+  .footer .landing-logo {
+    color: #c0c3ce; }
+  .footer .footer_text {
+    max-width: 366px; }
+
+.footer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
