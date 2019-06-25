@@ -20,6 +20,9 @@ button {
   font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
   border: none; }
+  button:hover {
+    background-color: #ffc717;
+    color: #e6e6e6; }
 
 .header {
   padding: 26px 192px 220px;
@@ -141,7 +144,6 @@ button {
   justify-content: space-between;
   margin: 0 170px -80px;
   padding: 30px 126px 46px;
-  z-index: 1;
   background: linear-gradient(45deg, #e3ab01 0%, #922b54 100%); }
   .section_banner_text_wrap {
     text-align: left; }

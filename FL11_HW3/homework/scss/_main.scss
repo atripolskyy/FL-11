@@ -9,6 +9,20 @@
   border-radius: $arc;  
 }
 
+$z-layers: (
+  default: 0,
+  underline: -1
+);
+
+@function z($key) {
+  @if map-has-key($z-layers, $key) {
+    @return map-get($z-layers, $key);
+  }
+ 
+  @warn "Unknown `#{$key}` in $z-layers.";
+  @return null;
+}
+
 body {
   margin: 0;
   min-width: 1920px;
@@ -26,6 +40,11 @@ button {
   font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
   border: none;
+
+  &:hover {
+    background-color: lighten( $color-background-button, 10% );
+    color: darken( #fff, 10% );
+  }
 }
 
 .header {
@@ -62,7 +81,7 @@ button {
   position: relative;
   max-width: 610px;
   margin: 80px 0 50px;
-  z-index: 0;
+  z-index: z(default);
   color: $color-text-header;
   font: 700 90px 'Source Sans Pro', sans-serif;
   line-height: 96px;  
@@ -72,7 +91,7 @@ button {
     position: absolute;
     left: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: z(underline);
     height: 25px;
     width: 380px;
     background-color: $color-text-underline;
@@ -94,7 +113,7 @@ button {
 .section_text {
   position: relative;
   display: inline-block;
-  z-index: 0;
+  z-index: z(default);
   text-align: center;
   color: $color-text-header;
   font: 600 42px 'Source Sans Pro', sans-serif;
@@ -104,7 +123,7 @@ button {
     position: absolute;
     right: 12px;
     bottom: 6px;
-    z-index: -1;
+    z-index: z(underline);
     height: 12px;
     width: 190px;
     background-color: $color-text-underline;    
@@ -133,7 +152,7 @@ button {
     position: relative;
     display: inline-block;
     margin: 10px 0 0;
-    z-index: 0;
+    z-index: z(default);
     color: #fff;
     font-size: 26px;
     font-weight: 600;
@@ -144,7 +163,7 @@ button {
       display: inline-block;
       left: 0;
       top: 20px;
-      z-index: -1;
+      z-index: z(underline);
       height: 12px;
       width: 100%;
       background-color: $color-text-underline;
@@ -167,7 +186,6 @@ button {
   justify-content: space-between;
   margin: 0 170px -80px;
   padding: 30px 126px 46px;
-  z-index: 1;
   background: $background-banner;
 
   &_text_wrap {
@@ -178,7 +196,7 @@ button {
     position: relative;
     display: inline-block;
     margin: 0 0 5px;
-    z-index: 0;
+    z-index: z(default);
     color: $color-text-header;
     font-size: 30px;
     font-weight: 700;
@@ -189,7 +207,7 @@ button {
       position: absolute;
       left: 120px;
       bottom: 3px;
-      z-index: -1;
+      z-index: z(underline);
       height: 12px;
       width: 65px;
       background-color: $color-text-underline;
