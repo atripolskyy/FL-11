@@ -1,13 +1,13 @@
-$headingTextColor: #fff;
+$font-family: 'Fresca', sans-serif;
 
-$textColor: #d1d1d1;
+$color-text-header: #fff;
+$color-text-underline: #ff4e33;
+$color-text: #d1d1d1;
 
-$cardAndFooterBackground: #3b3f50;
+$color-background-body: #21232e;
+$color-background-card-footer: #3b3f50;
+$color-background-button: #e3ac00;
 
-$buttonBackground: #e3ac00;
+$image-header: "../img/m-h-night.jpg";
 
-$bodyBackground: #21232e;
-
-$headerBackground: url("../img/m-h-night.jpg") no-repeat center/100% auto;
-
-$bannerGradient: linear-gradient(to right, #dea504 0%,#97344e 100%);
+$background-banner: linear-gradient(45deg, #e3ab01 0%,#922b54 100%);

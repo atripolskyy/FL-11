@@ -1,13 +1,13 @@
-$headingTextColor: #2c2f3c;
+$font-family: 'Hind', sans-serif;
 
-$textColor: #adc3ce;
+$color-text-header: #2c2f3c;
+$color-text-underline: #14a0c7;
+$color-text: #adc3ce;
 
-$cardAndFooterBackground: #21232e;
+$color-background-body: #fff;
+$color-background-card-footer: #21232e;
+$color-background-button: #699900;
 
-$buttonBackground: #699900;
+$image-header: "../img/m-h-day.jpg";
 
-$bodyBackground: #fff;
-
-$headerBackground: url("../img/m-h-day.jpg") no-repeat center/100% auto;
-
-$bannerGradient: linear-gradient(to right, #649314 0%,#2f5dd3 100%);
+$background-banner: linear-gradient(45deg, #699902 0%,#2b59de 100%);
