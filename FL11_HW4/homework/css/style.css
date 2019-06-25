@@ -1,0 +1,154 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre, a,
+abbr, acronym,
+address, big,
+cite, code, del,
+dfn, em, img,
+ins, kbd,
+q, s, samp,
+small, strike,
+strong, sub, sup,
+tt, var,
+b, u, i,
+center, dl,
+dt, dd,
+ol, ul, li,
+fieldset, form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article, aside, canvas,
+details, embed,
+figure, figcaption,
+footer, header,
+hgroup, menu,
+nav,
+output, ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside,
+details, figcaption,
+figure, footer,
+header, hgroup,
+menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: content-box; }
+
+body {
+  min-width: 900px;
+  font-family: 'Open Sans', sans-serif; }
+
+.header {
+  padding: 40px 0 150px;
+  background: url("../img/sample2.jpg") no-repeat center; }
+
+.header-top {
+  display: flex; }
+  .header-top .landing-logo {
+    margin-right: auto;
+    color: #fff; }
+  .header-top a {
+    color: #fff;
+    text-decoration: none; }
+
+.header__heading,
+.header__text {
+  text-align: center;
+  color: #fff; }
+
+.header__heading {
+  margin-top: 320px;
+  font-size: 50px;
+  letter-spacing: 8px; }
+  .header__heading span {
+    font-size: 90px; }
+
+.header-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  margin: 200px 0 150px; }
+  .header-links a {
+    display: inline-block;
+    height: 50px;
+    padding: 0 80px;
+    border: 2px solid #fff;
+    font-size: 16px;
+    line-height: 50px;
+    color: #fff;
+    text-decoration: none; }
+
+.header__text--footer {
+  margin-left: auto;
+  padding-left: 40px;
+  color: #fff;
+  width: 50%; }
+
+.article {
+  display: flex; }
+  .article__img {
+    align-self: flex-start;
+    width: 50%; }
+
+.subscribe-form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.footer {
+  display: flex;
+  justify-content: space-between; }
