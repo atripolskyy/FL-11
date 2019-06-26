@@ -92,8 +92,16 @@ body {
   min-width: 900px;
   font-family: 'Open Sans', sans-serif; }
 
+.btn {
+  border: none;
+  background-color: #097774;
+  color: #fff; }
+  .btn:hover {
+    background-color: #0da6a2;
+    color: #e6e6e6; }
+
 .header {
-  padding: 40px 0 150px;
+  padding: 40px 102px 150px;
   background: url("../img/sample2.jpg") no-repeat center; }
 
 .header-top {
@@ -138,11 +146,70 @@ body {
   color: #fff;
   width: 50%; }
 
+main .section {
+  padding-left: 102px;
+  padding-right: 102px; }
+
+.articles-section {
+  padding-top: 200px;
+  padding-bottom: 134px;
+  background-color: #f3f3f3; }
+
 .article {
   display: flex; }
   .article__img {
     align-self: flex-start;
     width: 50%; }
+
+.news-section {
+  padding-top: 70px;
+  padding-bottom: 76px;
+  text-align: center; }
+  .news-section .btn {
+    margin-top: 100px;
+    padding: 0 8em;
+    line-height: 97px;
+    font-size: 1.6em; }
+
+.news {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10vh;
+  padding: 0 25px; }
+  .news .news__item {
+    overflow: hidden;
+    height: 48vh;
+    position: relative; }
+    .news .news__item img {
+      height: 100%; }
+    .news .news__item .news__info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 38px 22px;
+      box-sizing: border-box; }
+      .news .news__item .news__info .news__likes {
+        align-self: flex-end;
+        padding: 8px;
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid #fff;
+        color: #fff; }
+      .news .news__item .news__info a {
+        color: #fff;
+        text-decoration: none;
+        background-color: #097774; }
+      .news .news__item .news__info .news__date {
+        align-self: flex-start;
+        color: #fff; }
+
+.subscribe {
+  padding: 95px 0 90px;
+  background-color: #f3f3f3; }
 
 .subscribe-form {
   display: flex;
@@ -151,4 +218,5 @@ body {
 
 .footer {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 0 102px; }

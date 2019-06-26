@@ -27,8 +27,8 @@
     <p class="header__text--footer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
   </header>
   <main>
+    <section class="section articles-section">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <section>
       <h2>Read some of our featured articles</h2>
       <div class="article">
           <img src="./img/sample-1.jpg"
@@ -53,20 +53,42 @@
         >
       </div>
     </section>
-    <div class="news">
-      <div class="news__item">
-        <img src="./img/news-list-1.jpg" alt="Greece">
+    <div class="section news-section">
+      <div class="news">
+        <div class="news__item">
+          <img src="./img/news-list-1.jpg" alt="Greece">
+          <div class="news__info">
+            <p class="news__likes">10 <span>&hearts;</span></p>
+            <a href="#">Explore</a>
+            <p class="news__date">January 18 Greece</p>
+          </div>
+        </div>
+        <div class="news__item">
+          <img src="./img/news-list-2.jpg" alt="Italy">
+          <div class="news__info">
+            <p class="news__likes">35 <span>&hearts;</span></p>
+            <a href="#">Explore</a>
+            <p class="news__date">June 18 Italy</p>
+          </div>
+        </div>
+        <div class="news__item">
+          <img src="./img/news-list-3.jpg" alt="USA">
+          <div class="news__info">
+              <p class="news__likes">199 <span>&hearts;</span></p>
+              <a href="#">Explore</a>
+              <p class="news__date">December 18 USA</p>
+            </div>
+        </div>
+        <div class="news__item">
+          <img src="./img/news-list-4.jpg" alt="Germany">
+          <div class="news__info">
+              <p class="news__likes">88 <span>&hearts;</span></p>
+              <a href="#">Explore</a>
+              <p class="news__date">May 18 Germany</p>
+            </div>
+        </div>
       </div>
-      <div class="news__item">
-        <img src="./img/news-list-2.jpg" alt="Italy">
-      </div>
-      <div class="news__item">
-        <img src="./img/news-list-3.jpg" alt="USA">
-      </div>
-      <div class="news__item">
-        <img src="./img/news-list-4.jpg" alt="Germany">
-      </div>
-      <button type="button">Load news</button>
+      <button type="button" class="btn">Load news</button>
     </div>
     <section class="subscribe">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -74,7 +96,7 @@
           <h2>Subscribe to our newsletter</h2>
           <form action="#">
             <input type="email" value="" placeholder="Enter your e-mail">
-            <button type="button">Subscribe</button>
+            <button type="button" class="btn">Subscribe</button>
           </form>
         </div>
     </section>
