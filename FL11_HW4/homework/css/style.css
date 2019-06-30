@@ -13,21 +13,42 @@ h5,
 h6,
 p,
 blockquote,
-pre, a,
-abbr, acronym,
-address, big,
-cite, code, del,
-dfn, em, img,
-ins, kbd,
-q, s, samp,
-small, strike,
-strong, sub, sup,
-tt, var,
-b, u, i,
-center, dl,
-dt, dd,
-ol, ul, li,
-fieldset, form,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
 label,
 legend,
 table,
@@ -38,13 +59,20 @@ thead,
 tr,
 th,
 td,
-article, aside, canvas,
-details, embed,
-figure, figcaption,
-footer, header,
-hgroup, menu,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
 nav,
-output, ruby,
+output,
+ruby,
 section,
 summary,
 time,
@@ -59,11 +87,17 @@ video {
   vertical-align: baseline;
 }
 
-article, aside,
-details, figcaption,
-figure, footer,
-header, hgroup,
-menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -71,7 +105,8 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -82,7 +117,8 @@ q {
 
 blockquote:before,
 blockquote:after,
-q:before, q:after {
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -123,7 +159,6 @@ body {
   font-size: 24px;
 }
 
-
 .section__heading span {
   font-weight: 600;
 }
@@ -134,7 +169,6 @@ body {
 }
 
 .clip {
- 
   width: 100%;
   height: 100%;
   clip-path: polygon(0 70%, 100% 100%, 100% 100%, 0 100%);
@@ -191,14 +225,14 @@ body {
 }
 
 .header-links a {
-    display: inline-block;
-    height: 50px;
-    padding: 0 60px;
-    border: 2px solid #fff;
-    font-size: 14px;
-    line-height: 50px;
-    color: #fff;
-    text-decoration: none;
+  display: inline-block;
+  height: 50px;
+  padding: 0 60px;
+  border: 2px solid #fff;
+  font-size: 14px;
+  line-height: 50px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .info-section {
@@ -293,6 +327,7 @@ body {
 
 .article + .article {
   margin-top: 15px;
+  flex-direction: row-reverse;
 }
 
 .article + .article .article__text {
