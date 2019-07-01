@@ -60,7 +60,8 @@ table {
 }
 
 body {
-  font-family: roboto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 .post-1 {
 	background: #B71757;
@@ -110,10 +111,17 @@ img {
 
 .header__wrapper {
   background-color: #162b4d;
+  align-items: center;
 }
 
 .header h1 {
   color: #fff;
+  font-size: 44px;
+  font-weight: 100;
+}
+
+.header h1 span {
+  color: #d12767;
 }
 
 .nav {
@@ -123,6 +131,7 @@ img {
 .nav a {
   color: #fff;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .main {
@@ -163,6 +172,7 @@ img {
   align-items: flex-end;
   font-size: 56px;
   opacity: 0.5;
+  font-weight: 100;
 }
 
 .posts article time span {
@@ -179,7 +189,8 @@ img {
 }
 
 .post-content h2 {
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: 100;
 }
 
 .post-content p {
