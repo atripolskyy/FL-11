@@ -106,7 +106,7 @@ img {
   display: flex;
   grid-column: 2 / -2;
   grid-row: 1 / 2;
-  padding: 40px 0;
+  padding: 36px 24px;
 }
 
 .header__wrapper {
@@ -126,12 +126,14 @@ img {
 
 .nav {
   margin-left: auto;
+  padding-right: 40px;
 }
 
 .nav a {
+  margin: 0 24px;
   color: #fff;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .main {
@@ -156,7 +158,18 @@ img {
   grid-template-columns: 1fr;
 }
 
-.posts article:nth-child(even) img {
+.image-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.posts article img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.posts article:nth-child(even) .image-wrap {
   grid-area: column-right;
 }
 
@@ -164,18 +177,25 @@ img {
   display: flex;
   flex-direction: column;
   color: #fff;
+  padding: 24px 16px 44px 44px;
+}
+
+.posts article:nth-child(even) .post-content {
+  padding-left: 16px;
+  padding-right: 44px;
 }
 
 .posts article time {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  font-size: 56px;
-  opacity: 0.5;
+  font-size: 58px;
+  opacity: 0.3;
   font-weight: 100;
 }
 
 .posts article time span {
+  margin-top: 15px;
   font-size: 32px;
 }
 
@@ -183,19 +203,29 @@ img {
   align-items: flex-start;
 }
 
-.posts article:nth-child(even) h2,
-.posts article:nth-child(even) p {
-  text-align: right;
-}
-
 .post-content h2 {
+  margin-top: -80px;
   font-size: 60px;
   font-weight: 100;
 }
 
 .post-content p {
+  margin-top: 30px;
   opacity: 0.5;
   font-size: 18px;
+  line-height: 24px;
+}
+
+.posts article h2,
+.posts article p {
+  padding-right: 122px;
+}
+
+.posts article:nth-child(even) h2,
+.posts article:nth-child(even) p {
+  text-align: right;
+  padding-left: 122px;
+  padding-right: 0;
 }
 
 .sidebar {
@@ -208,11 +238,27 @@ img {
   margin-bottom: 1.6rem;
 }
 
+.sidebar .post-content {
+  padding: 40px;
+  color: #000;
+}
+
 .sidebar article h2 {
+  margin-top: 0;
   font-size: 30px;
+  font-weight: 300;
+}
+
+.sidebar article p {
+  margin-top: 20px;
+}
+
+.footer {
+  margin-bottom: 7px;
 }
 
 .footer__wrapper {
+  padding: 36px 35px;
   justify-content: space-between;
   background-color: #162b4d;
 }
@@ -220,6 +266,16 @@ img {
 .footer p {
   color: #fff;
   opacity: 0.2;
+  font-size: 18px;
+}
+
+.copyrights p + p {
+  margin-top: 10px;
+}
+
+.made-by {
+  white-space: pre-line;
+  line-height: 22px;
 }
 
 @media (max-width: 1400px) {
