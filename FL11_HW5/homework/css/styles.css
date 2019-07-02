@@ -301,6 +301,11 @@ img {
   padding-right: 44px;
 }
 
+.posts article:last-child:nth-child(even) .post-content {
+  padding-left: 44px;
+  padding-right: 16px;
+}
+
 .posts article time {
   display: flex;
   flex-direction: column;
@@ -317,6 +322,10 @@ img {
 
 .posts article:nth-child(even) time {
   align-items: flex-start;
+}
+
+.posts article:last-child:nth-child(even) time {
+  align-items: flex-end;
 }
 
 .post-content h2 {
@@ -343,6 +352,13 @@ img {
   text-align: right;
   padding-left: 122px;
   padding-right: 0;
+}
+
+.posts article:last-child:nth-child(even) h2,
+.posts article:last-child:nth-child(even) p {
+  text-align: left;
+  padding-left: 0;
+  padding-right: 122px;
 }
 
 .sidebar {
