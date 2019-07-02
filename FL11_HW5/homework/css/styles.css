@@ -1,82 +1,133 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
- /*
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #162b4d;
-  --link: #fff;
-  --link--hover: #b8b8b8;
-  --bg-footer-color: #162b4d;
-}*/
-
-.post-1 {
-	background: #B71757;
-}
-.post-2 {
-	background: #0D7E71;
-}
-.post-3 {
-	background: #b1660e;
-}
-.post-4 {
-	background: #d12767;
-}
-.post-5 {
-	background: #2d95bb;
-}
-
-/* Your styles go here */
 * {
   box-sizing: border-box;
 }
@@ -129,6 +180,20 @@ img {
 .header__menu-toggle {
   margin-top: 30px;
   display: none;
+  background: none;
+  border: none;
+}
+
+.header__menu-toggle .icon-bar {
+  position: relative;
+  display: block;
+  width: 1.375rem;
+  height: .125rem;
+  background-color: #fff;
+}
+
+.header__menu-toggle .icon-bar + .icon-bar {
+  margin-top: .3125rem;
 }
 
 .header__menu {
@@ -169,6 +234,26 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-areas: "column-left column-right";
+}
+
+.post-1 {
+	background: #B71757;
+}
+
+.post-2 {
+	background: #0D7E71;
+}
+
+.post-3 {
+	background: #b1660e;
+}
+
+.post-4 {
+	background: #d12767;
+}
+
+.post-5 {
+	background: #2d95bb;
 }
 
 .posts article:last-child {
