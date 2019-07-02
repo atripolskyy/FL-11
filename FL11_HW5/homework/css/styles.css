@@ -235,7 +235,7 @@ img {
   grid-template-columns: 1fr;
 }
 
-.posts article {
+.post {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-areas: "column-left column-right";
@@ -274,6 +274,10 @@ img {
 .post img {
   width: 100%;
   height: 100%;
+}
+
+.post img {
+  display: block;
   object-fit: fill;
 }
 
@@ -297,8 +301,9 @@ img {
 .post-content {
   display: flex;
   flex-direction: column;
+  position: relative;
   color: #fff;
-  padding: 24px 16px 44px 44px;
+  padding: 44px 16px 44px 44px;
 }
 
 .post:nth-child(even) .post-content {
@@ -315,6 +320,9 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  position: absolute;
+  top: 24px;
+  right: 16px;
   font-size: 58px;
   opacity: 0.3;
   font-weight: 100;
@@ -326,15 +334,16 @@ img {
 }
 
 .post:nth-child(even) time {
-  align-items: flex-start;
+  right: auto;
+  left: 16px;
 }
 
 .post:last-child:nth-child(even) time {
-  align-items: flex-end;
+  left: auto;
+  right: 16px;
 }
 
 .post-content h2 {
-  margin-top: -80px;
   font-size: 60px;
   font-size: 3.75rem;
   font-weight: 100;
@@ -414,7 +423,6 @@ img {
 }
 
 @media screen and (max-width: 1400px) {
-
   .header,
   .main,
   .footer {
@@ -459,13 +467,12 @@ img {
   }
 
   .post-content {
-    position: relative;
     padding: 30px 36px 180px;
   }
 
   .post time {
     position: absolute;
-    bottom: 30px;
+    top: calc(100% - 140px);
     left: 0;
     width: 100%;
     align-items: center;
@@ -486,10 +493,6 @@ img {
     padding-right: 0;
   }
 
-  .post-content h2 {
-    margin-top: 0;
-  }
-
   .sidebar {
     grid-column: 9 / 14;
   }
@@ -500,7 +503,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .header,
   .main,
   .footer {
