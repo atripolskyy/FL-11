@@ -51,18 +51,15 @@ table {
  * Feel free to change name of colors if you need it
  * Feel free to add new colors if you need it
  */
+ /*
 :root {
   --bg-color--dark: #0b192f;
   --bg-color--header: #162b4d;
   --link: #fff;
   --link--hover: #b8b8b8;
-  --bg-footer-color: #162b4d;;
-}
+  --bg-footer-color: #162b4d;
+}*/
 
-body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-}
 .post-1 {
 	background: #B71757;
 }
@@ -86,6 +83,9 @@ body {
 
 body {
   background-color: #0b192f;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 img {
@@ -99,6 +99,7 @@ img {
   grid-auto-rows: auto;
   grid-gap: 0 1.6rem;
   grid-template-columns: 1fr repeat(12, minmax(1rem, 5.825rem)) 1fr;
+  min-width: 480px;
 }
 
 .header__wrapper,
@@ -106,7 +107,7 @@ img {
   display: flex;
   grid-column: 2 / -2;
   grid-row: 1 / 2;
-  padding: 36px 24px;
+  padding: 0 24px;
 }
 
 .header__wrapper {
@@ -115,6 +116,7 @@ img {
 }
 
 .header h1 {
+  margin: 34px 0;
   color: #fff;
   font-size: 44px;
   font-weight: 100;
@@ -124,16 +126,31 @@ img {
   color: #d12767;
 }
 
-.nav {
-  margin-left: auto;
-  padding-right: 40px;
+.header__menu-toggle {
+  margin-top: 30px;
+  display: none;
 }
 
-.nav a {
-  margin: 0 24px;
+.header__menu {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+.header__menu a {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 100%;
   color: #fff;
   text-decoration: none;
   font-size: 22px;
+}
+
+.header__menu a:hover {
+  background-color: #283d5f;
 }
 
 .main {
@@ -150,7 +167,7 @@ img {
 
 .posts article {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 50%);
   grid-template-areas: "column-left column-right";
 }
 
@@ -158,19 +175,33 @@ img {
   grid-template-columns: 1fr;
 }
 
-.image-wrap {
+.post-thumbnail {
   display: flex;
   align-items: center;
 }
 
+.posts article a,
 .posts article img {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
 
-.posts article:nth-child(even) .image-wrap {
+.posts article:nth-child(even) .post-thumbnail {
   grid-area: column-right;
+}
+
+.posts article a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.posts article a:hover {
+  color: #b8b8b8;
+}
+
+.post-thumbnail a:hover img {
+  opacity: 0.5;
 }
 
 .post-content {
@@ -206,6 +237,7 @@ img {
 .post-content h2 {
   margin-top: -80px;
   font-size: 60px;
+  font-size: 3.75rem;
   font-weight: 100;
 }
 
@@ -258,7 +290,7 @@ img {
 }
 
 .footer__wrapper {
-  padding: 36px 35px;
+  padding: 36px 20px;
   justify-content: space-between;
   background-color: #162b4d;
 }
@@ -267,22 +299,15 @@ img {
   color: #fff;
   opacity: 0.2;
   font-size: 18px;
-}
-
-.copyrights p + p {
-  margin-top: 10px;
+  line-height: 22px;
+  margin-bottom: 5px;
 }
 
 .made-by {
   white-space: pre-line;
-  line-height: 22px;
 }
 
 @media (max-width: 1400px) {
-
-}
-
-@media (max-width: 768px) {
   .header, .main, .footer {
     grid-column-gap: 1.4rem;
   }
@@ -291,6 +316,23 @@ img {
   .footer__wrapper {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
+
+  .header__wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .header h1 {
+    margin: 44px 0;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__menu-toggle {
+    display: block;
   }
 
   .posts {
@@ -303,18 +345,18 @@ img {
                         "column-right";
   }
 
-  .posts article:nth-child(even) img {
+  .posts article:nth-child(even) .post-thumbnail {
     grid-area: column-left;
   }
 
   .post-content {
     position: relative;
-    padding-bottom: 30px;
+    padding: 30px 36px 180px;
   }
 
   .posts article time {
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     left: 0;
     width: 100%;
     align-items: center;
@@ -326,15 +368,29 @@ img {
 
   .posts article:nth-child(even) h2,
   .posts article:nth-child(even) p {
+    padding-left: 0;
     text-align: left;
+  }
+
+  .posts article h2,
+  .posts article p {
+    padding-right: 0;
+  }
+
+  .post-content h2 {
+    margin-top: 0;
   }
 
   .sidebar {
     grid-column: 9 / 14;
   }
+
+  .footer__wrapper {
+    padding: 36px 30px 20px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .header, .main, .footer {
     grid-column-gap: 1rem;
   }
