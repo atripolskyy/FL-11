@@ -85,7 +85,7 @@ if (askPlay) {
             maxRange = maxRangeDefault;
             rand = Math.random() * maxRange;
             rand = Math.round(rand);
-            console.log('random number: ', rand);
+
             currentPrize = 0;
             firstPrize = firstPrizeDefault;
             secondPrize = secondPrizeDefault;
@@ -93,11 +93,9 @@ if (askPlay) {
             count = 0;
           }
         } else {
-
           maxRange += addToMaxRange;
           rand = Math.random() * maxRange;
           rand = Math.round(rand);
-          console.log('random number: ', rand);
 
           firstPrize *= timesBiggerPrize;
           secondPrize *= timesBiggerPrize;
@@ -117,7 +115,7 @@ if (askPlay) {
             maxRange = maxRangeDefault;
             rand = Math.random() * maxRange;
             rand = Math.round(rand);
-            console.log('random number: ', rand);
+
             currentPrize = 0;
             firstPrize = firstPrizeDefault;
             secondPrize = secondPrizeDefault;
