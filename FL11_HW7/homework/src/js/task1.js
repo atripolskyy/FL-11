@@ -1,7 +1,7 @@
 let email = prompt('Type your email please', '');
 
 const minEmailLength = 6,
-      minPasswordLength = 5;
+  minPasswordLength = 5;
 
 if (email === '' || email === null) {
   alert('Canceled');
@@ -11,45 +11,45 @@ if (email === '' || email === null) {
   } else {
     if (email === 'user@gmail.com' || email === 'admin@gmail.com') {
       let password = prompt('Type your password please', '');
-          
-          if (password === '' || password === null) {
-            alert('Canceled');
+      if (password === '' || password === null) {
+        alert('Canceled');
+      } else {
+        if (email === 'user@gmail.com' && password === 'UserPass' 
+        || email === 'admin@gmail.com' && password === 'AdminPass') {
+          let ask = confirm('Do you want to change your password?');
+
+          if (ask === false) {
+            alert('You have failed the change.');
           } else {
-            if (email === 'user@gmail.com' && password === 'UserPass' || email === 'admin@gmail.com' && password === 'AdminPass') {
-              let ask = confirm('Do you want to change your password?');
-                  
-                  if (ask === false) {
-                    alert('You have failed the change.');
-                  } else {
-                    let password = prompt('Please write the old password', '');
-                    
-                        if (password === '' || password === null) {
-                          alert('Canceled');
-                        } else {
-                          if (email === 'user@gmail.com' && password === 'UserPass' || email === 'admin@gmail.com' && password === 'AdminPass') {
-                            let password = prompt('Please write the new password', '');
-                                
-                                if (password.length < minPasswordLength) {
-                                  alert('It’s too short password. Sorry.');
-                                } else {
-                                  let newPassword = prompt('Please write the new password again', '');
-                                      
-                                      if (newPassword === password) {
-                                        alert('You have successfully changed your password.');
-                                      } else {
-                                        alert('You wrote the wrong password.');
-                                      }
-                                }
-                          }
-                        }
-                  }
+            let password = prompt('Please write the old password', '');
+
+            if (password === '' || password === null) {
+              alert('Canceled');
             } else {
-              alert('Wrong password');
+              if (email === 'user@gmail.com' && password === 'UserPass'
+               || email === 'admin@gmail.com' && password === 'AdminPass') {
+                let password = prompt('Please write the new password', '');
+
+                if (password.length < minPasswordLength) {
+                  alert('It’s too short password. Sorry.');
+                } else {
+                  let newPassword = prompt('Please write the new password again', '');
+
+                  if (newPassword === password) {
+                    alert('You have successfully changed your password.');
+                  } else {
+                    alert('You wrote the wrong password.');
+                  }
+                }
+              }
             }
           }
+        } else {
+          alert('Wrong password');
+        }
+      }
     } else {
       alert('I don’t know you');
     }
   }
 }
-
