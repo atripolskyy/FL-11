@@ -27,9 +27,11 @@ if (askPlay) {
 
     let possiblePrize = firstPrize;
 
+    let second_count = 2;
+
     if (count === 1) {
       possiblePrize = secondPrize;
-    } else if (count === 2) {
+    } else if (count === second_count) {
       possiblePrize = thirdPrize;
     }
 
@@ -72,7 +74,7 @@ if (askPlay) {
           count = 0;
         }
 
-      } else if (count === 2) {
+      } else if (count === second_count) {
         currentPrize += secondPrize;
         if (!confirm('Congratulation, you won! Your prize is: ' + currentPrize + '$. Do you want to continue?')) {
           alert('Thank you for your participation. Your prize is: ' + currentPrize + '$');
