@@ -18,7 +18,7 @@ if (email === '' || email === null) {
             if (email === 'user@gmail.com' && password === 'UserPass' || email === 'admin@gmail.com' && password === 'AdminPass') {
               let ask = confirm('Do you want to change your password?');
                   
-                  if (ask === null) {
+                  if (ask === false) {
                     alert('You have failed the change.');
                   } else {
                     let password = prompt('Please write the old password', '');
