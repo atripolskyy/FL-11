@@ -22,7 +22,6 @@ if (askPlay) {
       currentPrize = 0;
 
   do {
-
     let attemptsLeft = attempt - count,
         possiblePrize = firstPrize,
         second_count = 2;
