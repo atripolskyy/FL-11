@@ -107,7 +107,7 @@ const showFormattedDate = (el) => {
   return `Date: ${months[el.getMonth()]} ${el.getUTCDate()} ${el.getFullYear()}`;
 }
 
-console.log(showFormattedDate(new Date('2019-01-27T01:10:00')));
+showFormattedDate(new Date('2019-01-27T01:10:00'));
 
 const canConvertToDate = (el) => {
   return !isNaN(new Date(el));
