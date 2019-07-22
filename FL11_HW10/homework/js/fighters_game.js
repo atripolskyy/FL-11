@@ -89,17 +89,3 @@ function battle (obj1, obj2) {
     }
   }
 }
-
-const fighter1 = new Fighter({
-  name: 'John',
-  damage: 20,
-  agility: 25,
-  hp: 100
-});
-
-const fighter2 = new Fighter({
-  name: 'Jim',
-  damage: 10,
-  agility: 40,
-  hp: 120
-});
