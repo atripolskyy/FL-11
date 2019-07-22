@@ -1,13 +1,12 @@
 let Fighter = function (obj) {
-  let name = obj.name,
-    damage = obj.damage,
-    agility = obj.agility,
-    hp = obj.hp;
+  const name = obj.name,
+        damage = obj.damage,
+        agility = obj.agility,
+        totalHp = obj.hp;
 
-  this.wins = 0;
-  this.loses = 0;
-
-  const totalHp = obj.hp;
+  let hp = obj.hp,
+      wins = 0,
+      loses = 0;
 
   this.getName = function () {
     return name;
@@ -37,7 +36,7 @@ let Fighter = function (obj) {
   };
 
   this.logCombatHistory = function () {
-    console.log(`Name: ${this.getName()}, Wins: ${this.wins}, Losses: ${this.loses}`);
+    console.log(`Name: ${this.getName()}, Wins: ${wins}, Losses: ${loses}`);
   };
 
   this.heal = function (healthPoints) {
@@ -57,11 +56,11 @@ let Fighter = function (obj) {
   };
 
   this.addWin = function () {
-    this.wins += 1;
+    wins += 1;
   };
 
   this.addLoss = function () {
-    this.loses += 1;
+    loses += 1;
   };
 }
 
