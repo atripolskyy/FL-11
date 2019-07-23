@@ -61,6 +61,8 @@ function saveText() {
         parentEl.querySelector('._delButton').classList.remove('hide');
         parentEl.querySelector('._markCheck').classList.remove('hide');
 
+  parentEl.querySelector('.text').removeAttribute('contenteditable');
+
   this.removeEventListener('click', saveText);
   this.remove();
 }
