@@ -15,8 +15,8 @@ function addItem() {
 
     li.innerHTML = `<input type="checkbox" name="mark" class="_markCheck"> 
     <div class="text">${receiver.value}</div>
-     <button class="_editButton" type="button">edit</button> 
-     <button class="_delButton" type="button">del</button>`;
+     <button class="_editButton" type="button"><i class="material-icons">edit</i></button> 
+     <button class="_delButton" type="button"><i class="material-icons">delete</i></button>`;
 
     li.querySelector('._editButton').addEventListener('click', editText);
     li.querySelector('._delButton').addEventListener('click', delNode);
@@ -49,7 +49,7 @@ function editText() {
   let saveButton = document.createElement('button');
       saveButton.setAttribute('type', 'button');
       saveButton.classList.add('_saveButton');
-      saveButton.innerText = 'save';
+      saveButton.innerHTML = '<i class="material-icons">save</i>';
 
       parentEl.insertBefore(saveButton, parentEl.querySelector('._editButton'));
       parentEl.querySelector('._saveButton').addEventListener('click', saveText);

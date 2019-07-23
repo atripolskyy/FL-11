@@ -188,6 +188,7 @@ header {
 .list li {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   padding: 10px 10px 10px 0;
 }
 
@@ -205,4 +206,12 @@ header {
 
 .marked {
   color: #d9d9d9;
+}
+
+._editButton,
+._saveButton,
+._delButton {
+  border: none;
+  background: none;
+  color: blue;
 }
