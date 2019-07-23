@@ -143,14 +143,37 @@ body {
   font-family: sans-serif;
 }
 
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: blue;
+}
+
+header {
+  display: flex;
+}
+
+#receiver {
+  flex: 1;
+}
+
+#addToList {
+  margin-left: 20px;
+}
+
 #root {
   margin: 10px 20px;
   background: #fff;
   padding: 10px 20px 30px;
-}
-
-#list {
-  list-style: decimal;
 }
 
 .list li {
