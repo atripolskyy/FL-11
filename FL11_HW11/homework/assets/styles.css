@@ -199,6 +199,10 @@ header {
   display: none;
 }
 
+.text {
+  padding: 0 15px 0 10px;
+}
+
 .marked {
   color: #d9d9d9;
 }
