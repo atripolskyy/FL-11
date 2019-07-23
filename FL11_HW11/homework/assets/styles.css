@@ -169,7 +169,17 @@ header {
 }
 
 #addToList {
-  margin-left: 20px;
+  margin-left: 14px;
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+#addToList i {
+  font-weight: bold;
+  font-size: 28px;
+  background-color: #c0c0c0;
+  padding: 2px;
 }
 
 #root {
