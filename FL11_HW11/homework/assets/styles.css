@@ -139,7 +139,6 @@ table {
 body {
   box-sizing: border-box;
   padding: 10px 20px 30px;
-  background: #eee;
   font-family: sans-serif;
 }
 
@@ -160,10 +159,13 @@ h1 {
 
 header {
   display: flex;
+  margin-top: 20px;
 }
 
 #receiver {
   flex: 1;
+  padding: 0 20px;
+  height: 40px;
 }
 
 #addToList {
@@ -174,11 +176,23 @@ header {
   margin: 10px 20px;
   background: #fff;
   padding: 10px 20px 30px;
+  max-width: 650px;
+}
+
+.list {
+  padding-top: 10px;
+  margin-top: 20px;
+  border-top: 5px solid #c0c0c0;
 }
 
 .list li {
   display: flex;
   flex-wrap: wrap;
+  padding: 10px 10px 10px 0;
+}
+
+._delButton {
+  margin-left: auto;
 }
 
 .hide {
