@@ -1,7 +1,7 @@
 let listCount = 0;
 const addToList = document.getElementById('addToList'),
       receiver = document.getElementById('receiver'),
-      maxList = 4,
+      maxList = 10,
       errorEl = document.getElementById('error');
 
 function addItem() {
