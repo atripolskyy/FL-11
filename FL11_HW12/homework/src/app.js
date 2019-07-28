@@ -1,12 +1,3 @@
-/*const rootNode = document.getElementById('root');
-
-const todoItems = [
-    {isDone: false, id: 12345, description: 'Todo 1'}
-];*/
-
-// Your code goes here
-
-//rootNode.appendChild(/* Append your list item node*/);
 const toDoApp = () => {
   const rootNode = document.getElementById('root');
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -26,7 +17,6 @@ const toDoApp = () => {
   }
 
   function showTasks() {
-    //console.log(tasks);
     let error = false;
     if (rootNode.querySelector('.tasks')) {
       rootNode.querySelector('.tasks').remove();
@@ -34,10 +24,10 @@ const toDoApp = () => {
     const ul = document.createElement('ul');
           ul.classList.add('tasks');
           ul.innerHTML = tasks.map(task => {
-            return `<li id="${task.item_id}"${task.done ? ' class="done"' : ''}>
-              <input type="checkbox" name="mark" class="_mark-task"${task.done ? ' checked="checked"' : ''}>
-              <span>${task.text}</span>
-              <button type="button" class="_del-task"${task.done ? ' disabled="disabled"' : ''}>Del</button>
+            return `<li id="${task.id}"${task.isDone ? ' class="done"' : ''}>
+              <input type="checkbox" name="mark" class="_mark-task"${task.isDone ? ' checked="checked"' : ''}>
+              <span>${task.description}</span>
+              <button type="button" class="_del-task"${task.isDone ? ' disabled="disabled"' : ''}>Del</button>
             </li>`;
     }).join('');
 
@@ -53,8 +43,10 @@ const toDoApp = () => {
         const itemId = e.target.parentNode.id;
 
         tasks.forEach(item => {
-          if (item.item_id === +itemId && item.done === true) {
-            alert('Error! You can\'t edit already done item');
+          if (item.id === +itemId && item.isDone === true) {
+
+            showAlert('Error! You can\'t edit already done item');
+
             error = true;
           }
         });
@@ -64,6 +56,28 @@ const toDoApp = () => {
         }
       });
     });
+  }
+
+  function showAlert(text) {
+    const timeOut = 2000;
+    const timeOutSecond = 1000;
+
+    const alertPopup = document.createElement('div');
+          alertPopup.classList.add('alert');
+          alertPopup.innerHTML = `<p>${text}</p>`;
+
+    rootNode.appendChild(alertPopup);
+
+    if (!/OPR/.test(navigator.userAgent) && !/Edge/.test(navigator.userAgent)) {
+      alertPopup.setAttribute('style', 'left: 20px; right: auto;');
+    }
+
+    setTimeout(function(){
+      rootNode.querySelector('.alert').style.opacity = 0;
+      setTimeout(function(){
+        rootNode.querySelector('.alert').remove();
+      }, timeOutSecond);
+    }, timeOut);
   }
 
   function addItemPage() {
@@ -85,26 +99,26 @@ const toDoApp = () => {
   function addTask(e) {
     e.preventDefault();
 
-    const text = rootNode.querySelector('.task-name').value;
+    const description = rootNode.querySelector('.task-name').value;
     let error = false;
 
     let lastIndex = 0;
 
     tasks.forEach(item => {
-      if (item.item_id >= lastIndex) {
-        lastIndex = item.item_id + 1;
+      if (item.id >= lastIndex) {
+        lastIndex = item.id + 1;
       }
 
-      if (item.text === text) {
-        alert('Error! You can\'t add already exist item');
+      if (item.description === description) {
+        showAlert('Error! You can\'t add already exist item');
         error = true;
       }
     });
 
     const task = {
-      item_id: lastIndex,
-      text,
-      done: false
+      id: lastIndex,
+      description,
+      isDone: false
     }
 
     if (!error) {
@@ -118,7 +132,7 @@ const toDoApp = () => {
     const taskId = +this.parentNode.id;
 
     tasks.forEach((task, i) => {
-      if (task.item_id === taskId) {
+      if (task.id === taskId) {
         tasks.splice(i, 1);
       }
     });
@@ -138,9 +152,9 @@ const toDoApp = () => {
     const taskId = +this.parentNode.id;
 
     tasks.forEach((task, i) => {
-      if (task.item_id === taskId) {
+      if (task.id === taskId) {
         if (this.checked) {
-          tasks[i].done = true;
+          tasks[i].isDone = true;
           parentNode.classList.add('done');
           parentNode.querySelector('._del-task').setAttribute('disabled', 'disabled');
           tasks.push(tasks[i]);
@@ -148,7 +162,7 @@ const toDoApp = () => {
 
           showTasks();
         } else {
-          tasks[i].done = false;
+          tasks[i].isDone = false;
           const itemCurrent = tasks[i];
 
           const items = rootNode.querySelector('.tasks').children;
@@ -181,7 +195,7 @@ const toDoApp = () => {
     let task = {};
 
     tasks.forEach((item, i) => {
-      if (item.item_id === +taskId) {
+      if (item.id === +taskId) {
         taskIndex = i;
         task = item;
       }
@@ -189,7 +203,7 @@ const toDoApp = () => {
 
     rootNode.innerHTML = `<h1>Modify task</h1>
     <form action="#">
-      <input type="text" name="task-name" value="${task.text}" class="task-name" required>
+      <input type="text" name="task-name" value="${task.description}" class="task-name" required>
       <div class="row">
         <button type="button" class="_cancel-task">Cancel</button>
         <button type="submit" class="_save-task">Save changes</button>
@@ -200,14 +214,14 @@ const toDoApp = () => {
       e.preventDefault();
       const taskText = rootNode.querySelector('.task-name').value;
       tasks.forEach(item => {
-        if (item.item_id !== +taskId && item.text === taskText) {
-          alert('Error! You can\'t add already exist item');
+        if (item.id !== +taskId && item.description === taskText) {
+          showAlert('Error! You can\'t add already exist item');
           error = true;
         }
       });
-      
+
       if (!error) {
-        tasks[taskIndex].text = taskText;
+        tasks[taskIndex].description = taskText;
         localStorage.setItem('tasks', JSON.stringify(tasks));
         location.hash = '';
       }

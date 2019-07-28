@@ -135,6 +135,10 @@ table {
 }
 
 /*styles*/
+body {
+  position: relative;
+}
+
 #root {
   display: flex;
   flex-wrap: wrap;
@@ -142,12 +146,91 @@ table {
   flex-direction: column;
   max-width: 500px;
   margin: 0 auto;
+  padding: 50px 0;
 }
 
 .row {
   display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+button {
+  background-color: #92cf5c;
+  border: 1px solid #92cf5c;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 15px;
+  height: 36px;
+  line-height: 36px;
+}
+
+._add-task {
+  margin-bottom: 20px;
+}
+
+._del-task {
+  margin-left: auto;
+}
+
+._cancel-task {
+  background-color: chocolate;
+}
+
+.tasks {
+  width: 100%;
+}
+
+.tasks li {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+}
+
+.tasks li.done {
+  background-color: lightgray;
+}
+
+.tasks li + li {
+  border-top: 1px solid lightgray;
+}
+
+.tasks li.done + li.done {
+  border-top: 1px solid dimgray;
+}
+
+.tasks li span {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+form {
+  width: 60%;
 }
 
 .task-name {
   margin-bottom: 10px;
+  width: calc(100% - 30px);
+  border: 2px solid lightgray;
+  border-radius: 3px;
+  font-size: 20px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 15px;
+}
+
+.alert {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: chocolate;
+  color: #fff;
+  padding: 20px;
+  transition: opacity 2s ease-in-out;
 }
