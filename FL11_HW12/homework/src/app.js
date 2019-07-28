@@ -231,8 +231,6 @@ const toDoApp = () => {
     });
   }
 
-  //localStorage.clear();
-
   function locationHashChanged() {
     const regHash = /^#\/(modify)\/:\d$/.test(location.hash);
 
