@@ -215,8 +215,10 @@ button {
 }
 
 .tasks li span {
+  flex: 1;
   font-size: 20px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .done span {
