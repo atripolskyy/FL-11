@@ -161,10 +161,12 @@ h1 {
 }
 
 button {
-  background-color: #92cf5c;
-  border: 1px solid #92cf5c;
-  border-radius: 3px;
-  color: #fff;
+  background-color: lightgray;
+  border: none;
+  border-bottom: 2px solid gray;
+  border-right: 2px solid gray;
+  border-radius: 5px;
+  color: #000;
   font-size: 18px;
   padding: 0 15px;
   height: 36px;
@@ -177,10 +179,13 @@ button {
 
 ._del-task {
   margin-left: auto;
-}
-
-._cancel-task {
   background-color: chocolate;
+  border-color: maroon;
+  font-size: 16px;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
 }
 
 .tasks {
@@ -194,7 +199,7 @@ button {
 }
 
 .tasks li.done {
-  background-color: lightgray;
+  background-color: rgb(238, 238, 238);
 }
 
 .tasks li + li {
@@ -208,6 +213,11 @@ button {
 .tasks li span {
   font-size: 20px;
   margin-left: 20px;
+}
+
+.done span {
+  text-decoration: line-through;
+  color: dimgray;
 }
 
 form {

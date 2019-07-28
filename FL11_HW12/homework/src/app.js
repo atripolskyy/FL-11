@@ -27,7 +27,7 @@ const toDoApp = () => {
             return `<li id="${task.id}"${task.isDone ? ' class="done"' : ''}>
               <input type="checkbox" name="mark" class="_mark-task"${task.isDone ? ' checked="checked"' : ''}>
               <span>${task.description}</span>
-              <button type="button" class="_del-task"${task.isDone ? ' disabled="disabled"' : ''}>Del</button>
+              <button type="button" class="_del-task"${task.isDone ? ' disabled="disabled"' : ''}>Delete</button>
             </li>`;
     }).join('');
 
